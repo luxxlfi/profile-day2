@@ -1,60 +1,99 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-image: url('kertasbcg.jpeg');   
+body {
+    background-image: url('/img/kertasbcg.jpeg');
 }
-.containerC{
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.8s;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+.containerC {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.content{
+
+.containerH {
     text-align: flex-start;
-    background-color: rgba(255, 255, 255, 0.692);
-    width: 600px;
+    background-color: rgba(252, 252, 252, 0.692);
+    width: 300px;
     height: auto;
     margin: 50px;
+    margin-top: 70px;
     padding: 50px;
-   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-   border: solid 1px black;
-   border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    float: left;
 }
-.card1{
-    justify-content: center;
+
+.containerH .profil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 2px rgb(255, 255, 255);
+}
+
+.containerCard {;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: auto;
+    gap: 20px;
 }
 
+.con{
+    margin-top: 100px;
+}
 
-
-
-.containerCon{
+.containerCon {
     margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.contentCntac{
-    
+.contentCntac {
+
     width: 600px;
     height: 500px;
     text-align: center;
 }
 
-.profil{
+.contentCntac .profil {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    
-    
+
+
 }
-.profil img{
+
+.profil img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -63,7 +102,7 @@ body{
     border: solid 2px rgb(255, 255, 255);
 }
 
-.icon{
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +110,7 @@ body{
     margin-top: 20px;
 }
 
-.icon a{
+.icon a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,13 +124,13 @@ body{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
-.icon a:hover{
+.icon a:hover {
     background-color: rgb(255, 255, 255);
     color: black;
     transition: 0.8s;
 }
 
-.clos{
+.clos {
     margin: 10px;
     text-align: center;
     color: rgb(255, 255, 255);
