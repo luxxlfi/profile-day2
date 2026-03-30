@@ -9,7 +9,7 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
@@ -58,7 +58,7 @@ body {
     border: solid 2px rgb(255, 255, 255);
 }
 
-.containerCard {;
+.containerCard {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -66,7 +66,7 @@ body {
     gap: 20px;
 }
 
-.con{
+.con {
     margin-top: 100px;
 }
 
@@ -133,5 +133,128 @@ body {
 .clos {
     margin: 10px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(250, 250, 250);
+}
+
+/* about */
+
+.containerAb {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 80px;
+    padding: 20px;
+    border: solid 3px;
+    border-radius: 10px;
+
+
+}
+
+.contentAb {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.containerAb a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 50px;
+    margin-right: 20px;
+
+}
+
+.containerAb a:hover {
+    background-color: darkgray;
+    transition: 0.8s;
+
+}
+
+.gambar {
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gambar img {
+    width: 350px;
+}
+
+/* .gambar .nam {
+    border-top: 2px solid;
+} */
+
+/* contacCard */
+
+
+
+.containerCardContac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardContac h4{
+    text-align: center;
+}
+
+.cardContac {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: auto;
+    width: 600px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+
+.cardContac label {
+    margin-top: 20px;
+}
+
+.cardContac input {
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.cardContac select {
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.cardContac textarea {
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    resize: none;
+    height: 100px;
+}
+
+.cardContac button {
+    width: 80px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    border-radius: 100px;
+    border: solid black;
+}
+
+.cardContac button:hover {
+    width: 80px;
+    background-color: darkgray;
+    transition: 0.8s;
+    border: solid rgba(255, 255, 255, 0.742);
+    border-radius: 100px;
+
 }
