@@ -200,7 +200,7 @@ body {
 
 }
 
-.cardContac h4{
+.cardContac h4 {
     text-align: center;
 }
 
@@ -214,7 +214,7 @@ body {
     padding: 50px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    
+
 }
 
 .cardContac label {
@@ -257,4 +257,101 @@ body {
     border: solid rgba(255, 255, 255, 0.742);
     border-radius: 100px;
 
+}
+
+/* myproject */
+
+.containerMyProject{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.cardForm{
+    background-color: rgb(255, 255, 255)  ;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+form label{
+    display: block;
+}
+form input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: azure;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+form textarea{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.tec{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+form label{
+    margin-top: 10px;
+}
+
+.tec label{
+    display: flex;
+    align-items: center;
+}
+
+form button{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+}
+
+
+
+
+
+/* projet list */
+
+.hasil{
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    padding: 20px;  
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.ContainerHasil h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hasil .cardHasil{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
