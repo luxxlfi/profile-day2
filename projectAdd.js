@@ -1,26 +1,7 @@
-const projects = [
-    {
-        id: 1,
-        name: "contoh 1",
-        description: "contoh hasil projek pertama",
-        tech: ["node Js", "react Js"],
-        starDate: "2020-10-10",
-        endDate: "2024-01-03",
-        image: ""
-    }
-];
+// const projects = [];
 
-// function hitungdurasi(start, end) {
-//     const s = new Date(start);
-//     const e = new Date(end);
+let projects = JSON.parse(localStorage.getItem("projects")) || [];
 
-//     const diff = e - s;
-//     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-//     const months = Math.floor(days / 30);
-
-//     if (months > 0) return `${months} bulan`;
-//     return `${days} hari`;
-// }
 
 function renderProject() {
     const container = document.getElementById("projectList");
@@ -33,12 +14,11 @@ function renderProject() {
                 <div class="cardHasil">
                     <img src="${project.image}" alt="">
                     <h4>${project.name}</h4>
-                    <a>${project.starDate}</a><a>${project.endDate}</a>
                     <h6>${project.description}</h6>
-                    <p>${project.tech}</p>
+                    <p>${project.tech.join(", ")}</p>
                     <div class="ationBut">
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <button onclick="showProject(${i})">Show</button>
+                        <button onclick="deleteProject(${i})">Delete</button>
                     </div>
                 </div>`
     }
@@ -54,9 +34,10 @@ form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const name = document.getElementById('NameP').value;
-    const starDate = document.getElementById('startDate').value;
-    const endDate = document.getElementById('endDate').value;
+
     const description = document.getElementById('Description').value;
+
+    const imageInput = document.getElementById('image').files[0];
 
     let tech = [];
 
@@ -65,24 +46,77 @@ form.addEventListener('submit', function (event) {
     if (document.getElementById("Next").checked) tech.push("Next Js");
     if (document.getElementById("type").checked) tech.push("typescript");
 
-    const newProject = {
-        id: projects.length + 1,
-        name: name,
-        starDate: starDate,
-        endDate: endDate,
-        description: description,
-        tech,
-    };
+    const reader = new FileReader();
 
-    projects.push(newProject);
-    renderProject();
+    reader.onload = function () {
+        const newProject = {
+            id: projects.length + 1,
+            name: name,
+            description: description,
+            tech: tech,
+            image: reader.result
+        };
+
+        projects.push(newProject);
+
+        localStorage.setItem("projects", JSON.stringify(projects));
+
+        renderProject();
+    }
+
+    if (imageInput) {
+        reader.readAsDataURL(imageInput);
+    }
+
+    // const newProject = {
+    //     id: projects.length + 1,
+    //     name: name,
+    //     description: description,
+    //     tech,
+
+    // };
+
+    // projects.push(newProject);
+
+    // renderProject();
 
 })
 
-// function deletProject(id){
-//     const i = projects.findIndex(p => p.id == id);
-//     if(i !== -1){
-//         projects.splice(index, 1);
-//         renderProject();
-//     }
+
+
+function deleteProject(index) {
+    projects.splice(index, 1);
+    localStorage.setItem("projects", JSON.stringify(projects));
+    renderProject();
+}
+
+// show alert
+
+function showProject(index) {
+    const project = projects[index];
+    alert(
+        "nama" + project.name + "\n" +
+        "Deskripsi" + project.description + "\n" +
+        "tech" + project.tech.join(", ")
+    );
+}
+
+// function showProject(index) {
+//     const project = projects[index];
+//     const detail = document.getElementById('projectDetail');
+
+//     detail.innerHTML = `
+//         <div class="detailCard">
+//              <img src="${project.image}" width="300">
+//             <h2>${project.name}</h2>
+//             <p>${project.description}</p>
+//             <p class="techShow"><b>Tech:</b> ${project.tech.join(", ")}</p>
+//              <div class="butoncon">
+//                  <button onclick="closeDetail()">Close</button>
+//             </div>
+//          </div>
+//     `;
 // }
+
+// clos di detail
+
